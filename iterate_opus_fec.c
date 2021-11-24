@@ -34,7 +34,7 @@ void packet_handler(u_char *args, const struct pcap_pkthdr *header, const u_char
     int ethernet_header_length = 14;
     int ip_header_length;
     int udp_header_length;
-    int payload_length;
+    int rtp_header_length;
     u_char protocol;
 
 
@@ -76,8 +76,9 @@ void packet_handler(u_char *args, const struct pcap_pkthdr *header, const u_char
         return;
     }
 
-    payload = (unsigned char*)udp_payload + 12;
-    payload_len = payload - packet;
+    rtp_header_length = 12; // TODO: support extensions
+    payload = (unsigned char*)udp_payload + rtp_header_length;
+    payload_len = header->caplen - ethernet_header_length - ip_header_length - udp_header_length - rtp_header_length;
 
     //printf("Successfully extracted %d bytes payload from RTP packet\n", payload_len);
 

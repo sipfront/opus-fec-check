@@ -1,8 +1,10 @@
 # Tools to verify FEC in Opus RTP payload
 
+Based on Freeswitch `switch_opus_has_fec()` function (c) Anthony Minessale II et al.
+
 ## Install
 
-Install gcc, make, libpcap-dev and libopus-dev, then run make.
+Install gcc, make, libpcap-dev and libopus-dev, then run `make`.
 
 ## has_opus_fec
 
@@ -15,6 +17,15 @@ Run the tool with `has_opus_fec opus.raw` to check if FEC is carried in the payl
 ## iterate_opus_fec
 
 A tool which iterates over all packets of a pcap file and checks if it's RTP and whether its payload
-carriers FEC.
+carries FEC.
 
 Run the tool with `iterate_opus_fec opus.pcap` to check which packets carry FEC in the payload.
+
+# License
+
+Version: MPL 1.1
+
+The contents of this repo are subject to the Mozilla Public License Version
+1.1 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+http://www.mozilla.org/MPL/

@@ -1,6 +1,4 @@
 CC = gcc
-CFLAGS = -I/usr/include -g
-LDFLAGS = -L/usr/lib -lopus -lm
 
 all:
 	$(CC) -g -lopus -lm -o has_opus_fec has_opus_fec.c
