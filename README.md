@@ -26,6 +26,6 @@ Run the tool with `iterate_opus_fec opus.pcap` to check which packets carry FEC 
 Version: MPL 2.0
 
 The contents of this repo are subject to the Mozilla Public License Version
-1.1 (the "License"); you may not use this file except in compliance with
+2.0 (the "License"); you may not use file in this repo except in compliance with
 the License. You may obtain a copy of the License at
 https://www.mozilla.org/en-US/MPL/2.0/
